@@ -25,3 +25,4 @@ example of how to use it "brand-red-light-1"
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
