@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Run a multi-line script      
-      uses: appleboy/ssh-action@test
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.TEST_HOST }}
         username: ${{ secrets.USERNAME }}
