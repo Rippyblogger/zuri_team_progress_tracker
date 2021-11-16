@@ -1,0 +1,25 @@
+name: Progress Tracker CI
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [test]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run a multi-line script      
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.TEST_HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        script: |
+          cd /var/www/zuri_team_progress_tracker/frontend
+          git stash
+          git pull
