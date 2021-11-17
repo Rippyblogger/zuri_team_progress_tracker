@@ -21,5 +21,5 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
           cd /var/www/zuri_team_progress_tracker/frontend
-          git stash
-          git pull
+          sudo git stash
+          sudo git pull
